@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Paycheck Calculator</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- shopping.html -->
+    <form action="post" method="post" id="theForm">
+        <fieldset>
+            <p>Use this form to calculate the Regular Pay, Overtime pay, and Net Pay for an employee.</p>
+			<div><label for="firstName">First Name</label><input type="text" name="firstName" id="firstName" value="" required></div><br>
+            <div><label for="lastName">Last Name</label><input type="text" name="lastName" id="lastName" value="" required></div><br>
+            <div><label for="regularHoursWorked">Regular Hours Worked<br> (Between 0 and 40)</label><input type="text" name="regularHoursWorked" id="regularHoursWorked" value="0" required></div><br>
+            <div><label for="overtimeHoursWorked">Overtime Hours Worked<br> (Between 0 and 40</label><input type="text" name="overtimeHoursWorked" id="overtimeHoursWorked" value="0" required></div><br>
+            <div><label for="hourlyRate">Hourly Rate<br> (Between 0 and 99.99</label><input type="number" name="hourlyRate" id="hourlyRate" value="0.00" step="0.01" min=0 required></div><br>
+            <div><label for="regularPay">Regular Pay</label><input type="text" name="regularPay" id="regularPay" value="0.00" disabled></div><br>
+            <div><label for="overtimePay">Overtime Pay</label><input type="text" name="overtimePay" id="overtimePay" value="0.00" disabled></div><br>
+            <div><label for="grossPay">Gross Pay</label><input type="text" name="grossPay" id="grossPay" value="0.00" disabled></div><br>
+            <div><label for="ficaTaxRate">Fica Tax Rate (ex. 5.65)</label><input type="number" name="ficaTaxRate" id="ficaTaxRate" value="0.00" step="0.01" min=0 required></div><br>
+            <div><label for="stateTaxRate">State Tax Rate (ex. 5.75)</label><input type="number" name="stateTaxRate" id="stateTaxRate" value="0.00" step="0.01" min=0 required></div><br>
+            <div><label for="federalTaxRate">Federal Tax Rate (ex. 28.00)</label><input type="number" name="federalTaxRate" id="federalTaxRate" value="0.00" step="0.01" min=0 required></div><br>
+            <div><label for="totalTaxes">Total Taxes</label><input type="text" name="totalTaxes" id="totalTaxes" value="0.00" disabled></div><br>
+            <div><label for="employeeName">Employee Name</label><input type="text" name="employeeName" id="employeeName" value="" disabled></div><br>
+            <div><label for="netPay">Net Pay</label><input type="text" name="netPay" id="netPay" value="0.00" disabled></div><br>
+            
+			<div><input type="submit" value="Calculate" id="submit"></div>
+        </fieldset>
+    </form>
+    <script src="js/paycheck.js"></script>
+</body>
+</html>
